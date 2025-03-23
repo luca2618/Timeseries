@@ -62,9 +62,9 @@ def simulate_seasonal_arima(phi=[1], d=1, theta=[1], Phi=[1], D=1, Theta=[1], s=
 
     # Plot ACF and PACF
     fig, axes = plt.subplots(1, 2, figsize=(16, 6))
-    plot_acf(y, lags=12, ax=axes[0])
+    plot_acf(y, lags=24, ax=axes[0])
     axes[0].set_title('Autocorrelation Function (ACF)')
-    plot_pacf(y, lags=12, ax=axes[1])
+    plot_pacf(y, lags=24, ax=axes[1])
     axes[1].set_title('Partial Autocorrelation Function (PACF)')
     plt.tight_layout()
     plt.savefig(f'{label}_acf_pacf.png')
@@ -75,21 +75,21 @@ def simulate_seasonal_arima(phi=[1], d=1, theta=[1], Phi=[1], D=1, Theta=[1], s=
 
 # Example usage:
 # 2.1
-simulate_seasonal_arima(phi=[0.6], d=0, theta=[], Phi=[], D=0, Theta=[], s=12, n=120, label='Example 2.1')
+simulate_seasonal_arima(phi=[0.6], d=0, theta=[], Phi=[], D=0, Theta=[], s=12, n=1200, label='Example 2.1')
 # 2.2
-simulate_seasonal_arima(phi=[], d=0, theta=[], Phi=[-0.9], D=0, Theta=[], s=12, n=120, label='Example 2.2')
+simulate_seasonal_arima(phi=[], d=0, theta=[], Phi=[-0.9], D=0, Theta=[], s=12, n=1200, label='Example 2.2')
 
 # 2.3
-simulate_seasonal_arima(phi=[0.9], d=0, theta=[], Phi=[], D=0, Theta=[-0.7], s=12, n=120, label='Example 2.3')
+simulate_seasonal_arima(phi=[0.9], d=0, theta=[], Phi=[], D=0, Theta=[-0.7], s=12, n=1200, label='Example 2.3')
 
 # 2.4
-simulate_seasonal_arima(phi=[-0.6], d=0, theta=[], Phi=[-0.8], D=0, Theta=[], s=12, n=120,  label='Example 2.4')
+simulate_seasonal_arima(phi=[-0.6], d=0, theta=[], Phi=[-0.8], D=0, Theta=[], s=12, n=1200,  label='Example 2.4')
 
 # 2.5
-simulate_seasonal_arima(phi=[], d=0, theta=[0.4], Phi=[], D=0, Theta=[-0.8], s=12, n=120, label='Example 2.5')
+simulate_seasonal_arima(phi=[], d=0, theta=[0.4], Phi=[], D=0, Theta=[-0.8], s=12, n=1200, label='Example 2.5')
 
 # 2.6
-simulate_seasonal_arima(phi=[], d=0, theta=[-0.4], Phi=[0.7], D=0, Theta=[], s=12, n=120, label='Example 2.6')
+simulate_seasonal_arima(phi=[], d=0, theta=[-0.4], Phi=[0.7], D=0, Theta=[], s=12, n=1200, label='Example 2.6')
 
-#simulate_seasonal_arima(0,0,0,1,0,0,12, 120)
+#simulate_seasonal_arima(0,0,0,1,0,0,12, 1200)
 
