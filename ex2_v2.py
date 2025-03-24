@@ -63,7 +63,7 @@ def simulate_seasonal_arima_sarimax(phi, theta, Phi, Theta, p, d, q, P, D, Q, s,
 models = [
     {"params": {"phi": 0.6, "theta": 0, "Phi": 0, "Theta": 0}, "p": 1, "d": 0, "q": 0, "P": 0, "D": 0, "Q": 0, "s": 12, "title": "(1,0,0)x(0,0,0)"},
     {"params": {"phi": 0, "theta": 0, "Phi": -0.9, "Theta": 0}, "p": 0, "d": 0, "q": 0, "P": 1, "D": 0, "Q": 0, "s": 12, "title": "(0,0,0)x(1,0,0)"},
-    {"params": {"phi": 0.9, "theta": -0.7, "Phi": 0, "Theta": 0}, "p": 1, "d": 0, "q": 0, "P": 0, "D": 0, "Q": 1, "s": 12, "title": "(1,0,0)x(0,0,1)"},
+    {"params": {"phi": 0.9, "theta": 0, "Phi": 0, "Theta": -0.7}, "p": 1, "d": 0, "q": 0, "P": 0, "D": 0, "Q": 1, "s": 12, "title": "(1,0,0)x(0,0,1)"},
     {"params": {"phi": -0.6, "theta": 0, "Phi": -0.8, "Theta": 0}, "p": 1, "d": 0, "q": 0, "P": 1, "D": 0, "Q": 0, "s": 12, "title": "(1,0,0)x(1,0,0)"},
     {"params": {"phi": 0, "theta": 0.4, "Phi": 0, "Theta": -0.8}, "p": 0, "d": 0, "q": 1, "P": 0, "D": 0, "Q": 1, "s": 12, "title": "(0,0,1)x(0,0,1)"},
     {"params": {"phi": 0, "theta": -0.4, "Phi": 0.7, "Theta": 0}, "p": 0, "d": 0, "q": 1, "P": 1, "D": 0, "Q": 0, "s": 12, "title": "(0,0,1)x(1,0,0)"}
