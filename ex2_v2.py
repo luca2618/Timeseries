@@ -3,7 +3,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 from statsmodels.graphics.tsaplots import plot_acf, plot_pacf
 
-def simulate_seasonal_arima_sarimax(phi, theta, Phi, Theta, p, d, q, P, D, Q, s, n=1200):
+def simulate_seasonal_arima_sarimax(phi, theta, Phi, Theta, p, d, q, P, D, Q, s, n=12000):
     """
     Simulates a seasonal ARIMA (p, d, q) × (P, D, Q)_s model using SARIMAX.
 
