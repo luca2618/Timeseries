@@ -70,7 +70,7 @@ def kf_log_likelihood_1d(params, df, return_all=False):
         P_est = (1 - K_t * C) * P_pred
         x_filtered.append(x_est.item())
     if return_all:
-        return -log_likelihood, np.array(y_predicted)
+        return -log_likelihood, np.array(y_predicted), np.array(x_filtered)
     else:
         return -log_likelihood
 
@@ -202,7 +202,7 @@ def kf_log_likelihood_2d(params, df, return_all=False):
         y_predicted.append(y_pred.item())
 
     if return_all:
-        return -log_likelihood, np.array(x_filtered), np.array(y_predicted)
+        return -log_likelihood, np.array(y_predicted),np.array(x_filtered)
     else:
         return -log_likelihood
     
